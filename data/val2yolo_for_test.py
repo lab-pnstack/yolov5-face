@@ -4,7 +4,7 @@ import numpy as np
 import shutil
 from tqdm import tqdm
 
-root = '/ssd_1t/derron/WiderFace'
+root = '/content/datasets'
 
 
 def xywh2xxyy(box):
