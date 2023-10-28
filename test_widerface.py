@@ -135,8 +135,11 @@ if __name__ == '__main__':
     with open(opt.folder_pict, 'r') as f:
         lines = f.readlines()
         for line in lines:
-            line = line.strip().split('/')
-            pict_folder[line[-1]] = line[-2]
+            if '#' in line:
+                line = line.strip().split('/')
+                pict_folder[line[-1]] = line[-2]
+            else:
+                pass
 
     # Load model
     device = select_device(opt.device)
