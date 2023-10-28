@@ -136,7 +136,7 @@ if __name__ == '__main__':
         lines = f.readlines()
         for line in lines:
             if '#' in line:
-                line = line.strip().split('/')
+                line = line.strip().split(-1).split('/')
                 pict_folder[line[-1]] = line[-2]
             else:
                 pass
