@@ -36,7 +36,7 @@ def wider2face(phase='val', ignore_small=0):
         for line in tqdm(lines):
             line = line.strip()
             if '#' in line:
-                path = '{}/{}/images/{}'.format(root, phase, os.path.basename(line))
+                path = '{}/{}/images/{}'.format(root, phase, line.split()[-1])
                 img = cv2.imread(path)
                 height, width, _ = img.shape
                 data[path] = list()
